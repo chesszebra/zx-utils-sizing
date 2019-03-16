@@ -1,0 +1,9 @@
+$i: 20;
+
+@while $i < 500 {
+  .zx-width-#{$i} {
+    width: #{$i}px !important;
+  }
+
+  $i: $i + 20;
+}

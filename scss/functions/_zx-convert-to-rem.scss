@@ -1,0 +1,11 @@
+/// Converts the given value to a rem value.
+@function zx-convert-to-rem($value, $base-value: $zx-rem-base) {
+  $value: zx-strip-unit($value) / zx-strip-unit($base-value) * 1rem;
+
+  @if ($value == 0rem) {
+    $value: 0;
+  }
+
+  // Turn 0rem into 0
+  @return $value;
+}

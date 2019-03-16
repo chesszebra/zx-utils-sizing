@@ -1,0 +1,16 @@
+/// Converts the given values to a rem values.
+@function zx-rem-calc($values, $base-value: $zx-rem-base) {
+  $max: length($values);
+
+  @if $max == 1 {
+    @return zx-convert-to-rem(nth($values, 1), $base-value);
+  }
+
+  $remValues: ();
+
+  @for $i from 1 through $max {
+    $remValues: append($remValues, zx-convert-to-rem(nth($values, $i), $base-value));
+  }
+
+  @return $remValues;
+}

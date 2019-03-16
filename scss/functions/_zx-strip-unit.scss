@@ -1,0 +1,4 @@
+/// The zx-strip-unit function removes the unit from the given size.
+@function zx-strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
